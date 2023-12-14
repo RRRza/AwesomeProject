@@ -18,7 +18,7 @@ import Ex11 from './screens/Week2/Ex11';
 import Ex12 from './screens/Week2/Ex12';
 import Travel from './screens/Week3/Travel';
 import Health from './screens/Week5/Health';
-
+import Resort from './screens/Week4/Resort';
 
 export default function App() {
   return (
@@ -42,9 +42,11 @@ export default function App() {
   //       <Greeting name='Valeera' />
   //     </View>
 
-  //<Travel />
+  // <Travel />
 
-  <Health />
+  //<Health />
+
+  <Resort />
           
     );
 
