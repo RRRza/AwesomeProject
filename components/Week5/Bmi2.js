@@ -10,7 +10,7 @@ export default function Bmi2() {
     const [bmi, setBmi] = useState('0');
     const [Proportion, SetProportion] = useState('NORMAL');
 
-    console.log("STATE : ", weight, height, bmi);
+    console.log("STATE : ", weight, height, bmi, Proportion);
 
     const onPressButton = () => {
         console.log("Calculate button is pressed!!!");
@@ -19,15 +19,16 @@ export default function Bmi2() {
 
         let description = "";
         if (output < 18.5)
-            Description = "Underweight - eat a bagel!";
+            Description = "Underweight ";
         else if (output >= 18.5 && output <= 24.99)
-            Description = "Normal - keep it up!";
+            Description = "Normal ";
         else if (output >= 25 && output <= 29.99)
-            Description = "Overweight - exercise more!";
+            Description = "Overweight ";
         else if (output >= 30 && output <= 35)
-            Description = "Obese - get off the couch!";
-        description = "Morbidly Obese - take action!";
-        SetProportion(description)
+            Description = "Obese ";
+        else
+        description = "Extremely Obese ";
+        SetProportion(description);
 
     };
 
@@ -59,11 +60,11 @@ export default function Bmi2() {
             <View style={{ flexDirection: 'row', marginVertical: 10 }}>
                 {/* ซ้าย */}
                 <View style={{ flex: 1, backgroundColor: 'white', marginRight: 10, height: 100, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ fontSize: 20, }}> {bmi}</Text>
+                    <Text style={{ fontSize: 20, }}>{bmi}</Text>
                 </View>
                 {/* ขวา */}
                 <View style={{ flex: 1, backgroundColor: 'red', marginLeft: 10, height: 100, justifyContent: 'center', alignItems: 'center' }}>
-                    <text style={{ fontSize: 20, }}>{Proportion}</text>
+                    <Text style={{ fontSize: 20, }}>{Proportion}</Text>
                 </View>
             </View>
             {/* <Button title="Calculate" onPress={onPressButton} /> */}
