@@ -19,9 +19,11 @@ import Ex12 from './screens/Week2/Ex12';
 import Travel from './screens/Week3/Travel';
 import Health from './screens/Week5/Health';
 import Resort from './screens/Week4/Resort';
+import Home from './screens/Week6/Home';
 
 export default function App() {
   return (
+    
     //<Welcome/>
     //<Ex01 />
     //<Ex02 />
@@ -44,9 +46,12 @@ export default function App() {
 
   // <Travel />
 
-  //<Health />
+  // <Health />
 
-  <Resort />
+  // <Resort />
+
+  <Home />
+  
           
     );
 
