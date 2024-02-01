@@ -10,6 +10,8 @@ import Book from "../screens/Week9/Book";
 import TodoList from "../screens/Week9/TodoList";
 import BookDetail from "../screens/Week9/BookDetail";
 import BookForm from "../screens/Week9/BookForm";
+import Location from "../screens/Week10/Location";
+import LocationQuiz from "../screens/Week10/LocationQuiz";
 
 const Stack = createStackNavigator();
 
@@ -25,6 +27,8 @@ export default function RootStack() {
       <Stack.Screen name="BookDetail" component={BookDetail} options={{ title: "Book Detail" }} />
       <Stack.Screen name="BookForm" component={BookForm} />
       <Stack.Screen name="TodoList" component={TodoList} />
+      <Stack.Screen name="Location" component={Location} />
+      <Stack.Screen name="LocationQuiz" component={LocationQuiz} />
     </Stack.Navigator>
   );
 }
