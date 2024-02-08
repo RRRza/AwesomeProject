@@ -3,7 +3,8 @@ import { TouchableOpacity, View } from "react-native";
 import ImagePickerModal from "./ImagePickerModal";
 import DisplayImage from "./DisplayImage";
 
-export default function UploadArea(props) {
+
+export default function UploadArea1(props) {
     const [modalVisible, setModalVisible] = useState(false);
     return (
         <View>

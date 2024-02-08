@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Dimensions } from "react-native";
 import MapView, { Marker } from "react-native-maps";
-import UniversityMarkers from "./UniversityMarkers"
+import UniversityMarkers from "./UniversityMarkers";
 import LocationService from "../../services/LocationService"
-
 
 
 export default function MyMapView(props) {
