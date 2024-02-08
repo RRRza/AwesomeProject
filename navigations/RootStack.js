@@ -2,15 +2,16 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import PokemonTab from "./PokemonTab";
 import TodoList from "../screens/Week9/TodoList";
-import Location from "../screens/Week10/LocationQuiz";
+
 import BookForm from "../screens/Week9/BookForm";
 import BookDetail from "../screens/Week9/BookDetail";
 import Book from "../screens/Week9/Book";
-import LocationQuiz from "../screens/Week10/LocationQuiz";
+
 import Health from "../screens/Week5/Health";
 import Resort from "../screens/Week4/Resort";
 import Travel from "../screens/Week3/Travel";
 import BottomTab from "./BottomTab";
+import Location from "../screens/Week10/Location";
 
 
 const Stack = createStackNavigator();
@@ -28,7 +29,7 @@ export default function RootStack() {
       <Stack.Screen name="BookForm" component={BookForm} />
       <Stack.Screen name="TodoList" component={TodoList} />
       <Stack.Screen name="Location" component={Location} />
-      <Stack.Screen name="LocationQuiz" component={LocationQuiz} />
+      {/* <Stack.Screen name="LocationQuiz" component={LocationQuiz} /> */}
     </Stack.Navigator>
   );
 }

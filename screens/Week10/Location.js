@@ -1,8 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import GPS from "../../helpers/GPS";
-import MyMapView from "../../components/Week10/MymapView";
+import GPS from "../../healpers/GPS";
+
 
 
 export default function Location() {
@@ -58,9 +58,7 @@ export default function Location() {
             </View>
 
             {/* GIS map  */}
-            <View style={{ flex: 1 }}>
-                <MyMapView location={location} setLocation={setLocation} />
-            </View>
+
         </View>
     );
 }
