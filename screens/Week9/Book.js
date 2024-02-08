@@ -30,7 +30,7 @@ export default function Book() {
 
     const loadBooks = async () => {
         setRefresh(true);
-        let products = await BookStorage.readItems();
+        let products = await BookStoragege.readItems();
         setProducts(products);
         setRefresh(false);
     };
