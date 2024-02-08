@@ -2,6 +2,8 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { View, TouchableOpacity, Text, Image, FlatList } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import BookStorage from "../../storages/BookStorage";
+
 
 export default function Book() {
     const [products, setProducts] = useState([
@@ -25,6 +27,7 @@ export default function Book() {
         });
     }, [navigation]);
     //UI
+
     const loadBooks = async () => {
         setRefresh(true);
         let products = await BookStorage.readItems();
