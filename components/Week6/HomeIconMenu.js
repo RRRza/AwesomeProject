@@ -4,6 +4,7 @@ import { View, TextInput, } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import MyIcon from "../Week3/MyIcon";
 
+
 export default function HomeIconMenu() {
   const navigation = useNavigation();
   return (
@@ -24,7 +25,7 @@ export default function HomeIconMenu() {
         <MyIcon title="Pokemon" name="bolt" size={30} color="orange" onPress={() => { navigation.navigate("PokemonTab"); }} />
         <MyIcon title="Book Store" name="cubes" size={30} color="orange" onPress={ ()=>{ navigation.navigate("Book")}}s />
         <MyIcon title="Location" name="map-marker" size={30} color="orange" onPress={ ()=>{ navigation.navigate("Location") }}/>
-        <MyIconn title="More" name="ellipsis-h" size={30} color="orange" />
+        <MyIcon title="More" name="ellipsis-h" size={30} color="orange" />
       </View>
     </View>
   );
