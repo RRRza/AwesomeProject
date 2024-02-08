@@ -68,4 +68,3 @@ const writeItem = async (item) => {
 };
 
 export default { readItems, readItemDetail, removeItem, writeItem };
-
