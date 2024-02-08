@@ -8,7 +8,7 @@ export default function Hotel() {
         <View style={{ padding: 20 }}>
             {/*ก้อนที่ 1*/}
             <View style={{ flexDirection: 'row' }}>
-                <Image style={{ flex: 1, resizeMode: 'cover', aspectRatio: 16 / 9, borderRadius: 10 }} source={require('../../assets/week3/room-1.jpg')} />
+                <Image style={{ flex: 1, resizeMode: 'cover', aspectRatio: 16 / 9, borderRadius: 10 }} source={require('../../assets/Week3/room-1.jpg')} />
             </View>
 
             {/*ก้อนที่ 2*/}
