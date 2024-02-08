@@ -1,7 +1,9 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { View, KeyboardAvoidingView, Text, TextInput, ScrollView, Button } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
+import React, { useEffect, useLayoutEffect,useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { KeyboardAvoidingView, View, ScrollView, Text, Button, TextInput } from "react-native";
+
+import UploadArea from "../../components/Week11/uploadarea";
+import BookStorage from "../../storages/BookStorage";
 
 export default function BookForm() {
     const [id, setId] = useState("_" + Math.random().toString(36).substring(2, 9));
@@ -12,17 +14,18 @@ export default function BookForm() {
     const { item } = route.params;
     const navigation = useNavigation();
     useLayoutEffect(() => { navigation.setOptions({ title: item ? "edit" : "create" }); }, [navigation]);
-    useEffect(async () => {
-        if (item) {
-            let book = await BookStorage.readItemDetail(item);
-            setId(book.id);
-            setName(book.name);
-            setPrice(book.price.toString());
-            setImage(book.image);
-        }
-    }, []);
-
-    const saveBook = async () => {
+    
+    const onLoad = async()=> {
+      if (item) {
+        let book = await BookStorage.readItemDetail(item);
+        setId(book.id);
+        setName(book.name);
+        setPrice(book.price.toString());
+        setImage(book.image);
+      }
+    };
+    useEffect(() => { onLoad(); }, []);
+      const saveBook = async () => {
         //A NEW ITEM
         let new_data = { id: id, name: name, price: price, image: image };
         //SAVE
@@ -31,7 +34,6 @@ export default function BookForm() {
         navigation.navigate("Book");
       };
     
-
     return (
         <KeyboardAvoidingView style={{ flex: 1, padding: 20 }}>
             <ScrollView>
@@ -41,8 +43,9 @@ export default function BookForm() {
                 <TextInput placeholder="Enter price ..." value={price} onChangeText={(text) => setPrice(text)} />
                 <Text>ลิงค์รูปภาพ</Text>
                 <TextInput placeholder="Enter image URL ..." value={image} onChangeText={(text) => setImage(text)} />
+                <UploadArea image={image} setImage={setImage} />
             </ScrollView>
-            <Button title="SAVE" color="tomato" onPress={saveBook} />
+            <Button title="SAVE" color="tomato"onPress={saveBook} />
         </KeyboardAvoidingView>
     );
 }
