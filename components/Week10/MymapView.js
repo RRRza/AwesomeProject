@@ -49,7 +49,7 @@ export default function MyMapView(props) {
                         //if (props.recordLocation) {
                         console.log("SEND TO SERVER");
                         LocationService.storeItem({
-                            user_id: "Nattapon Pairote",
+                            user_id: "Ruchchanon Somphuen",
                             latitude: event.nativeEvent.coordinate.latitude,
                             longitude: event.nativeEvent.coordinate.longitude,
                         });
